@@ -1,0 +1,101 @@
+<div class="center-div">
+  <form>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Création du personnage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><label for="nomPersonnage">Nom du personnage :</label></td>
+          <td><input type="text" id="nomPersonnage" name="nomPersonnage" /></td>
+        </tr>
+        <tr>
+          <td><label for="classe">Classe :</label></td>
+          <td>
+            <select id="classe" name="classe">
+              <option *ngFor="let classe of classes" [value]="classe.slug">
+                {{ classe.name }}
+              </option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="niveauPersonnage">Niveau :</label></td>
+          <td>
+            <input type="text" id="niveauPersonnage" name="niveauPersonnage" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="alignement">Alignement :</label></td>
+          <td><input type="text" id="alignement" name="alignement" /></td>
+        </tr>
+        <tr>
+          <td><label for="historique">Historique :</label></td>
+          <td><input type="text" id="historique" name="historique" /></td>
+        </tr>
+        <tr>
+          <td><label for="race">Race :</label></td>
+          <td>
+            <select id="race" name="race">
+              <option *ngFor="let race of races" [value]="race.slug">
+                {{ race.name }}
+              </option>
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Création des statistiques</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><label for="statForce">Force : </label></td>
+          <td>
+            <label id="statForce">{{ stats.force }}</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="statDexterite">Dextérité : </label></td>
+          <td>
+            <label id="statDexterite">{{ stats.dexterite }}</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="statConstitution">Constitution : </label></td>
+          <td>
+            <label id="statConstitution">{{ stats.constitution }}</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="statIntelligence">Intelligence : </label></td>
+          <td>
+            <label id="statIntelligence">{{ stats.intelligence }}</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="statSagesse">Sagesse : </label></td>
+          <td>
+            <label id="statSagesse">{{ stats.sagesse }}</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="statCharisme">Charisme : </label></td>
+          <td>
+            <label id="statCharisme">{{ stats.charisme }}</label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button type="button" id="randomizeStatsButton" (click)="generateStats()">
+      Génération des statistiques
+    </button>
+  </form>
+</div>
