@@ -1,1 +1,11 @@
-<p>classes works!</p>
+<label for="classe">Classe :</label>
+<select id="classe" name="classe">
+  <option *ngFor="let classe of classes">
+    {{ classe.name }}
+  </option>
+</select>
+
+<div *ngIf="selectedClass">
+  <h2>{{ selectedClass.name }}</h2>
+  <p>{{ selectedClass.desc }}</p>
+</div>

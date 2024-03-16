@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Open5eService } from '../../services/open5e.service';
 import { NgFor } from '@angular/common';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -52,4 +53,12 @@ export class FormComponent {
   getRandomValue(): number {
     return Math.floor(Math.random() * 20) + 1; 
   }
+
+  redirectClasses(){
+    this.router.navigate(['/races'])
+  }
+  
 }
+
+
+

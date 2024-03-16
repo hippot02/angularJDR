@@ -5,7 +5,7 @@ import { ClassesComponent } from './components/classes/classes.component';
 
 
 export const routes: Routes = [
-    {path: '', component: FormComponent},
+    {path: '/form', component: FormComponent},
     {path: '/races', component: RacesComponent},
     {path: '/classes', component: ClassesComponent}
 ];

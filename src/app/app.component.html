@@ -1,1 +1,35 @@
-<app-form></app-form>
+<nav class="navbar">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <button
+        type="button"
+        class="nav-link"
+        (click)="switchSection('creation')"
+      >
+        Création
+      </button>
+    </li>
+    <li class="nav-item">
+      <button type="button" class="nav-link" (click)="switchSection('races')">
+        Races
+      </button>
+    </li>
+    <li class="nav-item">
+      <button type="button" class="nav-link" (click)="switchSection('classes')">
+        Classes
+      </button>
+    </li>
+  </ul>
+</nav>
+
+<div *ngIf="section === 'creation'">
+  <app-form></app-form>
+</div>
+
+<div *ngIf="section === 'races'">
+  <app-races></app-races>
+</div>
+
+<div *ngIf="section === 'classes'">
+  <app-classes></app-classes>
+</div>
