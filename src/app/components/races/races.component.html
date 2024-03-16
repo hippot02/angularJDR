@@ -1,1 +1,11 @@
-<p>races works!</p>
+<label for="race">Race :</label>
+<select id="race" name="race" [(ngModel)]="selectedRace">
+  <option *ngFor="let race of races" [ngValue]="race">
+    {{ race.name }}
+  </option>
+</select>
+
+<div *ngIf="selectedRace">
+  <h2>{{ selectedRace?.name }}</h2>
+  <p>{{ selectedRace?.desc }}</p>
+</div>

@@ -1,11 +1,11 @@
 <label for="classe">Classe :</label>
-<select id="classe" name="classe">
-  <option *ngFor="let classe of classes">
+<select id="classe" name="classe" [(ngModel)]="selectedClass">
+  <option *ngFor="let classe of classes" [ngValue]="classe">
     {{ classe.name }}
   </option>
 </select>
 
 <div *ngIf="selectedClass">
-  <h2>{{ selectedClass.name }}</h2>
-  <p>{{ selectedClass.desc }}</p>
+  <h2>{{ selectedClass?.name }}</h2>
+  <p>{{ selectedClass?.desc }}</p>
 </div>

@@ -1,12 +1,12 @@
 import { Component, NgModule } from '@angular/core';
 import { Open5eService } from '../../services/open5e.service';
-import { NgFor } from '@angular/common';
-import { NgModel } from '@angular/forms';
+import { NgFor, NgIf } from '@angular/common';
+import { FormsModule, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-classes',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, NgIf, FormsModule],
   templateUrl: './classes.component.html',
   styleUrl: './classes.component.scss'
 })
